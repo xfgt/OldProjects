@@ -1,6 +1,0 @@
-/* 
-
-	"hello heavens"
-	discord memes
-
-*/
