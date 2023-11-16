@@ -9,77 +9,77 @@ int main() {
 	// defining matrices
 	double** A = NULL, ** B = NULL, ** C = NULL;  
 
-	unsigned M = 0, 
-			 N = 0,
+	unsigned mA_rows = 0, 
+			 mA_cols = 0,
 			 
-			 F = 0,
-			 K = 0;
+			 mB_rows = 0,
+			 mB_cols = 0;
 
 	cout << "C = AB = ?\n";
 
-	// A = (M x N);
+	// A = (mA_rows x mA_cols);
 	cout << "Matrix A:\n";
-	cout << "Enter the number of rows: "; cin >> M;
-	cout << "Enter the number of columns: "; cin >> N;
+	cout << "Enter the number of rows: "; cin >> mA_rows;
+	cout << "Enter the number of columns: "; cin >> mA_cols;
 	cout << endl;
 
-	// B = (F x K);
+	// B = (mB_rows x mB_cols);
 	cout << "Matrix B:\n";
-	cout << "Enter the number of rows : "; cin >> F;
-	cout << "Enter the number of columns: "; cin >> K;
+	cout << "Enter the number of rows : "; cin >> mB_rows;
+	cout << "Enter the number of columns: "; cin >> mB_cols;
 
 
-	if (N != F) {	// rows of a MUST be equal to cols of B
+	if (mA_cols != mB_rows) {	// rows of A MUST be equal to cols of B
 		cout << "Number of the columns of A does not equal to the number of the rows of B!!!\n";
 		return 0;
 	}
 	cout << endl;
 
-	cout << "Therefore, C(" << M << ", " << K << ") = AB = ?\n";
+	cout << "Therefore, C(" << mA_rows << ", " << mB_cols << ") = AB = ?\n";
 
-	A = new double* [M];
-	B = new double* [N];
-	C = new double* [M];
+	A = new double* [mA_rows];
+	B = new double* [mA_cols];
+	C = new double* [mA_rows];
 
 	// allocating space for A rows
-	for (int i = 0; i < M; i++)
-		A[i] = new double[M];
+	for (int i = 0; i < mA_rows; i++)
+		A[i] = new double[mA_rows];
 	cout << endl;
 
 	// Matrix A
 	cout << "Enter matrix A:\n";
-	for (int i = 0; i < M; i++)
-		for (int j = 0; j < N; j++) {
+	for (int i = 0; i < mA_rows; i++)
+		for (int j = 0; j < mA_cols; j++) {
 			cout << "A[" << i << "][" << j << "] = ";
 			cin >> A[i][j];
 		}
 
 	// allocating space for B rows
-	for (int i = 0; i < N; i++)
-		B[i] = new double[K];
+	for (int i = 0; i < mA_cols; i++)
+		B[i] = new double[mB_cols];
 	cout << endl;
 
 	// Matrix B
 	cout << "Enter matrix B:\n";
-	for (int i = 0; i < N; i++)
-		for (int j = 0; j < K; j++) {
+	for (int i = 0; i < mA_cols; i++)
+		for (int j = 0; j < mB_cols; j++) {
 			cout << "B[" << i << "][" << j << "] = ";
 			cin >> B[i][j];
 		}
 
 	// allocating space for C rows
-	for (int i = 0; i < M; i++)
-		C[i] = new double[K];
+	for (int i = 0; i < mA_rows; i++)
+		C[i] = new double[mB_cols];
 
 
 
 
 	// multiplication
 	double elC = 0.0;						// element of C
-	for (int i = 0; i < M; i++) {			// M from A
-		for (int h = 0; h < K; h++) {		// K from C
+	for (int i = 0; i < mA_rows; i++) {			// mA_rows from A
+		for (int h = 0; h < mB_cols; h++) {		// mB_cols from C
 			elC = 0.0;
-			for (int j = 0; j < N; j++) {	// N from B
+			for (int j = 0; j < mA_cols; j++) {	// mA_cols from B
 				elC += A[i][j] * B[j][h];
 			}
 			C[i][h] = elC;
@@ -87,8 +87,8 @@ int main() {
 	}
 
 	// printing the C matrix 
-	for (int i = 0; i < M; i++) {
-		for (int h = 0; h < K; h++) {
+	for (int i = 0; i < mA_rows; i++) {
+		for (int h = 0; h < mB_cols; h++) {
 			cout << setw(4) << C[i][h]; // "set width" -> 4 spaces (*formatting & cosmetics* <3)
 		}
 		cout << endl;
@@ -96,13 +96,13 @@ int main() {
 
 
 	// deletion
-	for (int i = 0; i < M; i++) // from A = new double* [M];
+	for (int i = 0; i < mA_rows; i++) // from A = new double* [mA_rows];
 		delete[] A[i];
 
-	for (int i = 0; i < N; i++) // from B = new double* [N];
+	for (int i = 0; i < mA_cols; i++) // from B = new double* [mA_cols];
 		delete[] B[i];
 
-	for (int i = 0; i < M; i++) // from C = new double* [M];
+	for (int i = 0; i < mA_rows; i++) // from C = new double* [mA_rows];
 		delete[] C[i];
 
 	delete[] A;

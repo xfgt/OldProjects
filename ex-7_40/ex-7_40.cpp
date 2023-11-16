@@ -2,6 +2,8 @@
 
 int main()
 {
+
+    
     double first, second, third;
     std::cin >> first >> second >> third;
 
@@ -19,5 +21,5 @@ int main()
         std::cout << third;
     }
 
-    
+
 }
