@@ -8,8 +8,6 @@ int main()
 	srand(rand());
 	srand(rand());
 
-
-
 	int rows = 0;
 	int cols = 0;
 
@@ -26,20 +24,27 @@ int main()
 
 		for (int c = 0; c < cols; ++c) {
 
-			/*iSecret = rand() % (122 + 1 - (-12)) + (-12);
+			iSecret = rand() % (122 + 1 - (-12)) + (-12);
 			matrix[r][c] = iSecret;
 			std::cout << matrix[r][c] << " ";
-			iSecret = 0;*/
+			iSecret = 0;
 
-			matrix[r][c] = i++;
-			std::cout << matrix[r][c] << " ";
-			// TODO: sort nums first
-				// TODO: arrange them in a spiral
-
+			/*	
+				matrix[r][c] = i++;
+				std::cout << matrix[r][c] << " ";
+			*/
 		}
 		std::cout << std::endl;
 
 	}
+
+	/*
+		TODO:
+			- sort nums first
+				* get min num
+				* get max num
+			- arrange them in a spiral
+	*/
 
 
 
