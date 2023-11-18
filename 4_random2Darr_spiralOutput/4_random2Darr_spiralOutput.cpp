@@ -87,7 +87,6 @@ int main()
 	std::cout << std::endl << "smallest: " << lastSmallest;
 	
 
-
 	int firstBiggest = 0;
 	int lastBiggest = 0;
 	if (numsToInt[i] > numsToInt[i + 1]) {
@@ -150,12 +149,12 @@ int main()
 	/*
 		TODO:
 			- sort stringNums firstSmallest
-				* set the stringNums in one array ^
+				* set the stringNums in one array	^
 				* 
-				* get min num
-				* get max num
+				* get min num						^
+				* get max num						^
 				* 
-				* sort stringNums
+				* sort stringNums					x
 				
 			- arrange them in a spiral
 	*/
