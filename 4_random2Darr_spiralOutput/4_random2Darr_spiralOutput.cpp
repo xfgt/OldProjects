@@ -13,29 +13,26 @@ int main()
 
 	std::cout << "rows = "; std::cin >> rows;
 	std::cout << "cols = "; std::cin >> cols;
-	int areaSize = rows * cols;
+
 	
-	
-	
+	int matrixArea = rows * cols;
+	int holder = 0;
+	std::string stringNums = "";
 
 	int i = 0;
 	int** defaultMatrix = new int* [rows];
-
-	int* dMArr = new int[areaSize];
-	for (int i = 0; i < areaSize; i++)
-		dMArr[i] = NULL;
 	
-
 
 	for (int r = 0; r < rows; ++r) {
 		defaultMatrix[r] = new int[cols];
+
 
 		for (int c = 0; c < cols; ++c) {
 
 			iSecret = rand() % (122 + 1 - (-12)) + (-12);
 			defaultMatrix[r][c] = iSecret;
-			
-			dMArr[c] = iSecret; 
+			stringNums += iSecret;
+
 			std::cout << defaultMatrix[r][c] << " ";
 
 		}
@@ -44,22 +41,29 @@ int main()
 	}
 	std::cout << std::endl;
 	
-	for (int i = 0; i < areaSize; i++)
+	int* numsToInt = new int[matrixArea];
+	for (int i = 0; i < matrixArea; i++)
+		numsToInt[i] = NULL;
+
+	for (int i = 0; i < matrixArea; i++)
 	{
-		std::cout << dMArr[i] << " ";
+		numsToInt[i] = stringNums[i] - 0;
 	}
+	
+
+	
 	
 	
 	
 	/*
 		TODO:
-			- sort nums first
-				* set the nums in one array
+			- sort stringNums first
+				* set the stringNums in one array ^
 				* 
 				* get min num
 				* get max num
 				* 
-				* sort nums
+				* sort stringNums
 				
 			- arrange them in a spiral
 	*/
@@ -67,7 +71,7 @@ int main()
 
 
 
-	// MANAGE THE MEMORY
+/// MANAGE THE MEMORY
 	for (int i = 0; i < rows; ++i) {
 		delete[] defaultMatrix[i];
 		defaultMatrix[i] = nullptr;
@@ -75,16 +79,10 @@ int main()
 	delete[] defaultMatrix;
 	defaultMatrix = nullptr;
 
-	/* if dMArr **
 	
-	for (int i = 0; i < areaSize; ++i) {
-		delete[] dMArr[i];
-		dMArr[i] = nullptr;
-	}
-	delete[] dMArr;
-	dMArr = nullptr;*/
+		
 
-
+	
 	return 0;
 
 
