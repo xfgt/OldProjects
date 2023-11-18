@@ -13,51 +13,78 @@ int main()
 
 	std::cout << "rows = "; std::cin >> rows;
 	std::cout << "cols = "; std::cin >> cols;
+	int areaSize = rows * cols;
+	
+	
+	
 
-
-	int** matrix = new int* [rows];
 	int i = 0;
+	int** defaultMatrix = new int* [rows];
+
+	int* dMArr = new int[areaSize];
+	for (int i = 0; i < areaSize; i++)
+		dMArr[i] = NULL;
+	
+
 
 	for (int r = 0; r < rows; ++r) {
-
-		matrix[r] = new int[cols];
+		defaultMatrix[r] = new int[cols];
 
 		for (int c = 0; c < cols; ++c) {
 
 			iSecret = rand() % (122 + 1 - (-12)) + (-12);
-			matrix[r][c] = iSecret;
-			std::cout << matrix[r][c] << " ";
-			iSecret = 0;
+			defaultMatrix[r][c] = iSecret;
+			
+			dMArr[c] = iSecret; 
+			std::cout << defaultMatrix[r][c] << " ";
 
-			/*	
-				matrix[r][c] = i++;
-				std::cout << matrix[r][c] << " ";
-			*/
 		}
 		std::cout << std::endl;
-
+		
 	}
-
+	std::cout << std::endl;
+	
+	for (int i = 0; i < areaSize; i++)
+	{
+		std::cout << dMArr[i] << " ";
+	}
+	
+	
+	
 	/*
 		TODO:
 			- sort nums first
+				* set the nums in one array
+				* 
 				* get min num
 				* get max num
+				* 
+				* sort nums
+				
 			- arrange them in a spiral
 	*/
 
 
 
 
-	//MANAGE THE MEMORY
+	// MANAGE THE MEMORY
 	for (int i = 0; i < rows; ++i) {
-		delete[] matrix[i];
-		matrix[i] = nullptr;
+		delete[] defaultMatrix[i];
+		defaultMatrix[i] = nullptr;
 	}
+	delete[] defaultMatrix;
+	defaultMatrix = nullptr;
+
+	/* if dMArr **
+	
+	for (int i = 0; i < areaSize; ++i) {
+		delete[] dMArr[i];
+		dMArr[i] = nullptr;
+	}
+	delete[] dMArr;
+	dMArr = nullptr;*/
 
 
-	delete[] matrix;
-	matrix = nullptr;
 	return 0;
 
 
