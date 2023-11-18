@@ -39,6 +39,7 @@ int main()
 		std::cout << std::endl;
 		
 	}
+	iSecret = NULL;
 	std::cout << std::endl;
 	
 	int* numsToInt = new int[matrixArea];
@@ -48,8 +49,28 @@ int main()
 	for (int i = 0; i < matrixArea; i++)
 	{
 		numsToInt[i] = stringNums[i] - 0;
+		stringNums[i] = NULL;
+		std::cout << numsToInt[i] << " ";
 	}
-	
+
+
+	int middle = 0;
+	for (int x = 0; x <= (matrixArea/2); x++)
+	{
+		
+		if (numsToInt[x] > numsToInt[matrixArea - x - 1]) {
+
+			middle = numsToInt[x];
+
+		}
+		else {
+			middle = numsToInt[matrixArea - x - 1];
+
+		}
+		
+	}
+	std::cout << std::endl << "middle = " << middle;
+
 
 	
 	
