@@ -55,7 +55,6 @@ int main()
 
 	int firstSmallest = 0;
 	int lastSmallest = 0;
-	
 	if (numsToInt[i] < numsToInt[i + 1]) {
 		firstSmallest = numsToInt[i];
 		for (int j = 0; j < matrixArea; j++)
@@ -87,7 +86,41 @@ int main()
 	}
 	std::cout << std::endl << "smallest: " << lastSmallest;
 	
-	
+
+
+	int firstBiggest = 0;
+	int lastBiggest = 0;
+	if (numsToInt[i] > numsToInt[i + 1]) {
+		firstBiggest = numsToInt[i];
+		for (int j = 0; j < matrixArea; j++)
+		{
+			if (firstBiggest >= numsToInt[j]) {
+				lastBiggest = firstBiggest;
+			}
+			else {
+
+				firstBiggest = numsToInt[j];
+				lastBiggest = firstBiggest;
+			}
+		}
+	}
+	else
+	{
+		firstBiggest = numsToInt[i + 1];
+		for (int j = 0; j < matrixArea; j++)
+		{
+			if (firstBiggest >= numsToInt[j]) {
+				lastBiggest = firstBiggest;
+			}
+			else {
+
+				firstBiggest = numsToInt[j];
+				lastBiggest = firstBiggest;
+			}
+		}
+	}
+	std::cout << std::endl << "biggest: " << lastBiggest;
+
 
 	int middle = 0;
 	for (int x = 0; x <= (matrixArea/2); x++)
@@ -104,7 +137,7 @@ int main()
 		}
 		
 	}
-	std::cout << std::endl << "middle = " << middle;
+	std::cout << std::endl << "middle: " << middle;
 
 
 	
