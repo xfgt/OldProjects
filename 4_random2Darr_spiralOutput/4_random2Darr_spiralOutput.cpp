@@ -53,6 +53,41 @@ int main()
 		std::cout << numsToInt[i] << " ";
 	}
 
+	int firstSmallest = 0;
+	int lastSmallest = 0;
+	
+	if (numsToInt[i] < numsToInt[i + 1]) {
+		firstSmallest = numsToInt[i];
+		for (int j = 0; j < matrixArea; j++)
+		{
+			if (firstSmallest <= numsToInt[j]) {
+				lastSmallest = firstSmallest;
+			}
+			else {
+
+				firstSmallest = numsToInt[j];
+				lastSmallest = firstSmallest;
+			}
+		}
+	}
+	else
+	{
+		firstSmallest = numsToInt[i + 1];
+		for (int j = 0; j < matrixArea; j++)
+		{
+			if (firstSmallest <= numsToInt[j]) {
+				lastSmallest = firstSmallest;
+			}
+			else {
+
+				firstSmallest = numsToInt[j];
+				lastSmallest = firstSmallest;
+			}
+		}
+	}
+	std::cout << std::endl << "smallest: " << lastSmallest;
+	
+	
 
 	int middle = 0;
 	for (int x = 0; x <= (matrixArea/2); x++)
@@ -73,12 +108,15 @@ int main()
 
 
 	
+
+
+	
 	
 	
 	
 	/*
 		TODO:
-			- sort stringNums first
+			- sort stringNums firstSmallest
 				* set the stringNums in one array ^
 				* 
 				* get min num
