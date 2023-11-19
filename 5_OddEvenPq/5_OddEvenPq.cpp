@@ -1,20 +1,34 @@
-// 5_OddEvenPq.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+
+    /*
+        програма, която намира броя на четните елементи с нечетен пореден номер на масива,
+        които принадлежат на интервала [р, q]
+    */
+
+    int n = 0;
+    int num = 0;
+    int countEvenOnOddPos = 0;
+    std::cout << "number of elements: "; std::cin >> n;
+
+    if (1 < n < 100) {
+
+        int* oneDArr = new int[n];
+        for (int i = 0; i < n; i++)
+            oneDArr[i] = NULL;
+
+        for (int i = 0; i < n; i++)
+        {
+            std::cout << "element[" << i << "]: "; std::cin >> num;
+            oneDArr[i] = num;
+        }
+
+        
+    }
+    
+    std::cout << "all even nums from odd positions of the array: " << countEvenOnOddPos << std::endl;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
