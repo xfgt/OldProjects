@@ -25,6 +25,23 @@ int main()
         {
             std::cout << "element[" << i << "]: "; std::cin >> num;
             oneDArr[i] = num;
+
+
+            if (i != 0) {
+                if (i % 3 == 1) {
+                    if (oneDArr[i] % 2 == 0) {
+                        countEvenOnOddPos++;
+                        //std::cout << "countEvenOnOddPos: " << countEvenOnOddPos << std::endl;
+                    }
+                }
+                else if (i % 3 != 1) {
+                    if (oneDArr[i] % 2 == 0) {
+                        countEvenOnOddPos++;
+                        //std::cout << "countEvenOnOddPos: " << countEvenOnOddPos << std::endl;
+                    }
+                }
+            }
+
         }
 
         std::cout << "all even nums from odd positions of the array: " << countEvenOnOddPos << std::endl;
