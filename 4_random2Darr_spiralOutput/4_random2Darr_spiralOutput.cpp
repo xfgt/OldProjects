@@ -82,23 +82,24 @@ int main()
 	for (int i = 0; i < matrixArea; i++)
 		numsToInt[i] = NULL;
 
+	std::cout << "as 1D array: ";
 	for (int i = 0; i < matrixArea; i++)
 	{
 		numsToInt[i] = stringNums[i] - 0;
 		stringNums[i] = NULL;
-		//std::cout << numsToInt[i] << " ";
+		std::cout << numsToInt[i] << " ";
 	}
-	std::cout << std::endl;
+	
 	
 
 	sort(numsToInt, matrixArea);
 
-	/*std::cout << "\nSorted: ";
+	std::cout << "\nSorted: ";
 
 	for (int i = 0; i < matrixArea; i++)
 		std::cout << numsToInt[i] << " ";
 	
-	std::cout << "\n";*/
+	std::cout << "\n";
 
 
 	int top = 0,
@@ -144,7 +145,7 @@ int main()
 	}
 
 
-	std::cout << "spiral version: \n";
+	std::cout << "\nspiral version: \n";
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++)
 			std::cout << defaultMatrix[i][j] << " ";
@@ -157,7 +158,7 @@ int main()
 
 
 
-	/*int firstSmallest = 0;
+	int firstSmallest = 0;
 	int lastSmallest = 0;
 	if (numsToInt[i] < numsToInt[i + 1]) {
 		firstSmallest = numsToInt[i];
@@ -240,7 +241,7 @@ int main()
 		}
 		
 	}
-	std::cout << std::endl << "middle: " << middle;*/
+	std::cout << std::endl << "middle: " << middle;
 
 
 	
