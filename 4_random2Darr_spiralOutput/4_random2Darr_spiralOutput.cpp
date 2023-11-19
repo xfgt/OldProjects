@@ -93,12 +93,12 @@ int main()
 
 	sort(numsToInt, matrixArea);
 
-	std::cout << "\nSorted: ";
+	/*std::cout << "\nSorted: ";
 
 	for (int i = 0; i < matrixArea; i++)
 		std::cout << numsToInt[i] << " ";
 	
-	std::cout << "\n";
+	std::cout << "\n";*/
 
 
 	int top = 0,
@@ -144,7 +144,7 @@ int main()
 	}
 
 
-
+	std::cout << "spiral version: \n";
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++)
 			std::cout << defaultMatrix[i][j] << " ";
