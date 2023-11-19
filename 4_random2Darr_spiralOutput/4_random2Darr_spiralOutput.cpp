@@ -1,6 +1,44 @@
 
 #include <iostream>
 
+
+
+
+void sort(int num[], int len);
+void swapNums(int nums[],
+	int first, int second);
+
+void sort(int num[], int len)
+{
+	bool isSwapped;
+
+	for (int i = 0; i < len; i++)
+	{
+		isSwapped = false;
+		for (int j = 1; j < len - i; j++)
+		{
+			if (num[j] < num[j - 1])
+			{
+				swapNums(num, j, (j - 1));
+				isSwapped = true;
+			}
+		}
+		if (!isSwapped)
+		{
+			break;
+		}
+	}
+}
+
+
+void swapNums(int nums[],
+	int first, int second)
+{
+	int curr = nums[first];
+	nums[first] = nums[second];
+	nums[second] = curr;
+}
+
 int main()
 {
 	int iSecret;
@@ -52,6 +90,18 @@ int main()
 		stringNums[i] = NULL;
 		std::cout << numsToInt[i] << " ";
 	}
+
+
+	sort(numsToInt, matrixArea);
+
+	std::cout << "\nSorted: ";
+
+	for (int i = 0; i < matrixArea; i++)
+		std::cout << numsToInt[i] << " ";
+	// refresh numstoint
+	std::cout << "\n";
+
+
 
 	int firstSmallest = 0;
 	int lastSmallest = 0;
@@ -154,7 +204,7 @@ int main()
 				* get min num						^
 				* get max num						^
 				* 
-				* sort stringNums					x
+				* sort stringNums					^
 				
 			- arrange them in a spiral
 	*/
