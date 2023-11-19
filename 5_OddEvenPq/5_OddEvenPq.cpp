@@ -15,7 +15,7 @@ int main()
     int countEvenOnOddPos = 0;
     std::cout << "number of elements: "; std::cin >> n;
 
-    if (1 < n < 100) {
+    if (n > 1 && n < 100) {
 
         int* oneDArr = new int[n];
         for (int i = 0; i < n; i++)
@@ -27,8 +27,12 @@ int main()
             oneDArr[i] = num;
         }
 
+        std::cout << "all even nums from odd positions of the array: " << countEvenOnOddPos << std::endl;
+    }
+    else {
+        std::cout << "\nn is out of the range '1 < n < 100'";
         
     }
     
-    std::cout << "all even nums from odd positions of the array: " << countEvenOnOddPos << std::endl;
+    
 }
