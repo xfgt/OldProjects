@@ -61,13 +61,28 @@ int main()
 		for (int i = 0; i < n; i++)
 			indexes[i] = NULL;
 
-
+		int lastI = 0;
 		for (int i = 0; i < n; i++)
 		{
 			
+			
 			randN = rand() % (n + 1 - i) + i;
-			indexes[i] = randN;
-				
+			if (randN < n) {
+				if (lastI = randN) {
+					randN = 0;
+					randN = rand() % (n + 1 - i) + i;
+					lastI = randN;
+					indexes[i] = lastI;
+				}
+				else {
+					lastI = randN;
+					indexes[i] = lastI;
+
+				}
+			}
+			
+
+			
 	
 			
 		}
@@ -78,7 +93,10 @@ int main()
 		std::cout << std::endl;
 		for (int j = 0; j < n; j++)
 		{
-			std::cout << arr[ indexes[j] ] << " ";
+			
+			std::cout << arr[indexes[j]] << " ";
+			
+			
 		}
 		
 
