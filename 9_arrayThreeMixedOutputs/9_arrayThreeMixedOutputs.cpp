@@ -66,20 +66,23 @@ int main()
 		{
 			
 			
-			randN = rand() % (n + 1 - i) + i;
+				randN = rand() % (n + 1 - i) + i;
 			if (randN < n) {
-				if (lastI = randN) {
-					randN = 0;
-					randN = rand() % (n + 1 - i) + i;
-					lastI = randN;
-					indexes[i] = lastI;
-				}
-				else {
-					lastI = randN;
-					indexes[i] = lastI;
+				if (randN < n) {
+					if (lastI = randN) {
+						randN = 0;
+						randN = rand() % (n + 1 - i) + i;
+						lastI = randN;
+						indexes[i] = lastI;
+					}
+					else {
+						lastI = randN;
+						indexes[i] = lastI;
 
+					}
 				}
 			}
+			
 			
 
 			
