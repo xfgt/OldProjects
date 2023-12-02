@@ -14,9 +14,11 @@ int main()
         for (int i = 2; i <= n/2; ++i)
         {
             if(n % i == 0)
-                if (i == 2 || i % 2 == 1 || i % 3 == 0 && i % 3 == 2) {
-                    std::cout << i << " ";
-                    result += i;
+                if (i == 2 || i % 2 == 1 ) {
+                    if (i % 3 == 0 || i % 3 == 2) {
+                        std::cout << i << " ";
+                        result += i;
+                    }
                 }
             
         }
