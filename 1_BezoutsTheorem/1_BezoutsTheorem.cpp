@@ -17,7 +17,7 @@ int gcd(int a, int b)
 
 int main()
 {
-	// if gcd(a,b) !% c ---> no solution
+	
 	// solve:		a*x+b*y=0 (mod c)
 	
 	// x = s * (c / (a, b))
@@ -39,6 +39,7 @@ int main()
 	}
 	else {
 		std::cout << "Invalid input data!";
+		
 		
 	}
 }
