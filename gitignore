@@ -1,5 +1,26 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,visualstudio
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,vim
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,visualstudiocode,vim
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
 
 ### VisualStudioCode ###
 .vscode/*
@@ -255,7 +276,6 @@ _pkginfo.txt
 # Others
 ClientBin/
 ~$*
-*~
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
@@ -415,4 +435,4 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,visualstudio
+# End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,vim
