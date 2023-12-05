@@ -20,7 +20,7 @@ void addElement(std::string* arr, std::string element) {
 }
 int main()
 {
-	// -1 "end"
+	// -1 "end"				done
 	// 0 display array
 	// 1 add element
 	// 2 remove element
