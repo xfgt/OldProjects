@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1702629916 source:d:\cpp\getline\getline.cpp
+	<iostream>
+	<string>
+	<iomanip>
+

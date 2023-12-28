@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1703243386 source:d:\cpp\sumexamples\notxorandor\main.cpp
+	<iostream>
+	<bitset>
+
