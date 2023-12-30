@@ -20,7 +20,6 @@ int main()
     for(int i = 0; i < n; i++){
         std::cin >> num;
         arr[i] = num;
-
     }
 
     for(int i = 0; i < n; i++){
