@@ -60,16 +60,27 @@ int main()
                 }
                 int sum = 0;
 
-                int i = 0;
-                int j = 0;
 
-                for(i = 0; i <= nB; i++){
-                    for(j = 0; j <= mB; j++){
-                        sum += A[i][j] * B[j][i];
+                int g = 0;
+                int j = 0;
+                int z = 0;
+
+                while(g <= mA){
+                    sum += A[g][j] * B[j][z];
+                    j++;
+                    if(j > mB){
+                        std::cout << sum << " ";
+                        sum = 0;
+                        if(z <= mB)
+                            z++;
+                        j = 0;
                     }
-                    std::cout << sum << std::endl;
-                    sum = 0;
+                    if(z >= mB){
+                        g++;
+                        z=0;
+                    }
                 }
+
 
 
                //TODO C array
