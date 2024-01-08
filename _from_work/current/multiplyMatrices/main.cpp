@@ -60,37 +60,47 @@ int main()
                 }
                 int sum = 0;
 
-
                 int g = 0;
                 int j = 0;
                 int z = 0;
 
-                while(g <= mA){
+                int a = 0;
+                int b = 0;
+
+                while(g < mB){
                     sum += A[g][j] * B[j][z];
                     j++;
-                    if(j > mB){
-                        std::cout << sum << " ";
+                    if(j >= mB){
+                        C[a][b] = sum;
                         sum = 0;
-                        if(z <= mB)
+                        if(z <= mB){
                             z++;
+                            b++;
+                        }
                         j = 0;
                     }
                     if(z >= mB){
                         g++;
+                        a++;
+                        b=0;
                         z=0;
                     }
+
                 }
 
 
-
-               //TODO C array
-
-                // std::cout << std::endl << "C matrix: " << std::endl;
+                std::cout << std::endl;
+                for(int i = 0; i < nA; i++){
+                    for(int j = 0; j < nA; j++){
+                        std::cout << std::setw(5) << C[i][j];
+                    }
+                    std::cout << std::endl;
+                }
 
 
                 /** MEMORY MANAGEMENT **/
 
-                for(int i = 0; i < mA; i++){
+                for(int i = 0; i < nA; i++){
                     delete[] A[i];
                     delete[] B[i];
                     delete[] C[i];
