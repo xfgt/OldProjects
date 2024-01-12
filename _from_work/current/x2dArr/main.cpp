@@ -40,7 +40,7 @@ int main()
         for(int j = 0; j < n; j++){
             current_value = a[i][j];
             if(current_value == x){
-                std::cout << "LOL: " << i << std::endl;
+            // std::cout << "LOL: " << i << std::endl;
                 output[counter] = i;
                 counter++;
             } else{
