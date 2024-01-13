@@ -1,0 +1,5 @@
+﻿  3_random2Darr_botRightSumOfIndexPowRow.cpp
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\3_random2Darr_botRightSumOfIndexPowRow\3_random2Darr_botRightSumOfIndexPowRow.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\3_random2Darr_botRightSumOfIndexPowRow\3_random2Darr_botRightSumOfIndexPowRow.cpp(35,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\3_random2Darr_botRightSumOfIndexPowRow\3_random2Darr_botRightSumOfIndexPowRow.cpp(37,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  3_random2Darr_botRightSumOfIndexPowRow.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\3_random2Darr_botRightSumOfIndexPowRow.exe
