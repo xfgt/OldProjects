@@ -37,23 +37,48 @@ int main()
 {
 
     std::string word = "";
+    std::string lastWord = "";
 
     int n = 0;
     std::cout << "matrix lenght: "; std::cin >> n;
-
     std::string a[n][n];
-    int wordSize = 0;
+
+    int currentWordSize = 0;
+    int lastWordSize = 0;
+    int counter = 0;
 
 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-                std::cin >> word;
-            wordSize = word.size();
-            if(wordSize <= 9)
+            std::cin >> word;
+            currentWordSize = word.size();
+            
+            if(currentWordSize <= 9){
+                
+            
                 a[i][j] += word;
+                counter++;
+            
+                if(counter == 2){
+                    if(lastWordSize > currentWordSize){
+                        a[i][j] += lastWord;
+                        a[i][j-1] += word;
+                    }
+                    counter = 0;
+                }
+                
+                lastWord = word;
+                lastWordSize  = currentWordSize;
+            }
         }
 
     }
+
+
+
+
+
+
 
 
 
@@ -66,13 +91,6 @@ int main()
         }
         std::cout << std::endl;
     }
-
-
-
-
-
-
-
 
     return 0;
 }
