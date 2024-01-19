@@ -1,3 +1,0 @@
-﻿  1.1_randTests.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1.1_randTests\1.1_randTests.cpp(9,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  1.1_randTests.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\1.1_randTests.exe

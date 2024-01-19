@@ -1,3 +1,0 @@
-﻿  whilePtr.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\whilePtr\whilePtr.cpp(9,14): warning C4805: '!=': unsafe mix of type 'const char' and type 'bool' in operation
-  whilePtr.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\whilePtr.exe

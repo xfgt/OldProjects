@@ -1,0 +1,3 @@
+﻿  4_random2Darr_spiralOutput.cpp
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\4_random2Darr_spiralOutput\4_random2Darr_spiralOutput.cpp(45,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  4_random2Darr_spiralOutput.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\4_random2Darr_spiralOutput.exe

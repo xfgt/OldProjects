@@ -1,0 +1,3 @@
+﻿  2_random2Darr_topLeftToZero.cpp
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\2_random2Darr_toZero\2_random2Darr_topLeftToZero.cpp(7,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  2_random2Darr_toZero.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\2_random2Darr_topLeftToZero.exe

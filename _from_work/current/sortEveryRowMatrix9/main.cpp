@@ -49,26 +49,27 @@ int main()
 
 
     for(int i = 0; i < n; i++){
+        counter = 0;
         for(int j = 0; j < n; j++){
             std::cin >> word;
             currentWordSize = word.size();
             
             if(currentWordSize <= 9){
-                
-            
                 a[i][j] += word;
-                counter++;
             
-                if(counter == 2){
+                if(counter > 0){
                     if(lastWordSize > currentWordSize){
-                        a[i][j] += lastWord;
-                        a[i][j-1] += word;
+                        a[i][j] = "";
+                        a[i][j] = lastWord;
+                        a[i][j-1] = "";
+                        a[i][j-1] = word;
                     }
-                    counter = 0;
+                    
                 }
                 
                 lastWord = word;
                 lastWordSize  = currentWordSize;
+                counter++;
             }
         }
 

@@ -1,3 +1,0 @@
-﻿  4-charPtrPstr.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\4-charPtrPstr\4-charPtrPstr.cpp(12,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  4-charPtrPstr.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\4-charPtrPstr.exe

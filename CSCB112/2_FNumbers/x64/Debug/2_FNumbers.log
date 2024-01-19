@@ -1,0 +1,4 @@
+﻿  2_FNumbers.cpp
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\2_FNumbers\2_FNumbers.cpp(7,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\2_FNumbers\2_FNumbers.cpp(16,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  2_FNumbers.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\2_FNumbers.exe
