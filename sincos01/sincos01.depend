@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1704365990 source:d:\documents\personel\dev\cpp\programirane lekcii nbu\programiranelekciisol\sincos01\main.cpp
+	<iostream>
+	<cmath>
+

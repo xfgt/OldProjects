@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1702629916 source:d:\cpp\getline\getline.cpp
+	<iostream>
+	<string>
+	<iomanip>
+
+1704365990 source:d:\documents\personel\dev\cpp\programirane lekcii nbu\programiranelekciisol\getline\getline.cpp
+	<iostream>
+	<string>
+	<iomanip>
+

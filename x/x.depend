@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1703238259 source:d:\cpp\sumexamples\x\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+
+1703238259 source:c:\users\public\documents\ted\x\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+
+1704365990 source:d:\documents\personel\dev\cpp\programirane lekcii nbu\programiranelekciisol\x\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+

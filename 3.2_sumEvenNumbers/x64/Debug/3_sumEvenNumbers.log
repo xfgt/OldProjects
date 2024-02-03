@@ -1,0 +1,4 @@
+﻿  3_sumEvenNumbers.cpp
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\3.2_sumEvenNumbers\3_sumEvenNumbers.cpp(13,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\3.2_sumEvenNumbers\3_sumEvenNumbers.cpp(15,7): warning C4101: 'inputArr': unreferenced local variable
+  3_sumEvenNumbers.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\3_sumEvenNumbers.exe

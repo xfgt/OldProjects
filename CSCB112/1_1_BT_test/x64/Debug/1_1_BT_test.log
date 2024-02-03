@@ -1,5 +1,0 @@
-﻿  1_1_BT_test.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(72,31): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(81,31): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(92,30): warning C4018: '<': signed/unsigned mismatch
-  1_1_BT_test.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\1_1_BT_test.exe
