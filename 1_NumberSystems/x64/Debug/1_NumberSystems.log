@@ -1,3 +1,4 @@
-﻿  1_NumberSystems.cpp
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (NumberSystems.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  1_NumberSystems.cpp
 D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_NumberSystems\1_NumberSystems.cpp(21,20): warning C4804: '%': unsafe use of type 'bool' in operation
   1_NumberSystems.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\1_NumberSystems.exe

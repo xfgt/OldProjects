@@ -24,6 +24,7 @@
     <ProjectGuid>{4e693cd5-01e6-410c-a96d-1242a2041c4d}</ProjectGuid>
     <RootNamespace>My3LCM</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>3_LCM</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
