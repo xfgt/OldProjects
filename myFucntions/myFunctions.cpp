@@ -1,5 +1,28 @@
 #include <iostream>
 
+
+void printArr(char* inputArr, int size) {
+	for (int i = 0; i < size; i++) {
+		std::cout << inputArr[i];
+	}
+	std::cout << std::endl;
+}
+
+char* cutWBitmask(char* inputArr, char* bitmask, int size) {
+	char* output = new char[size];
+
+	for (int i = 0; i < size; i++) {
+		if (bitmask[i] == '0') {
+			output[i] = inputArr[i];
+		}
+		else if (bitmask[i] == '1') {
+			output[i] = '0';
+		}
+	}
+
+	return output;
+}
+
 int fact(int n){
     // n! = n * n-1 ... 1
     int a = n;

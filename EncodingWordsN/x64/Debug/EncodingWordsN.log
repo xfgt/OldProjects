@@ -1,2 +1,2 @@
 ﻿  EncodingWordsN.cpp
-  EncodingWordsN.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\EncodingWordsN.exe
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\EncodingWordsN\EncodingWordsN.cpp(49,2): error C3861: 'getline': identifier not found
