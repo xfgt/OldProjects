@@ -1,5 +1,7 @@
 ﻿  1_1_BT_test.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(69,31): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(78,31): warning C4018: '<': signed/unsigned mismatch
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(89,30): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(77,31): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(86,31): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(99,30): warning C4018: '<': signed/unsigned mismatch
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(101,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_1_BT_test\1_1_BT_test.cpp(102,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   1_1_BT_test.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\1_1_BT_test.exe
