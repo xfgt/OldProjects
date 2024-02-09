@@ -1,2 +1,4 @@
 ﻿  1_BezoutsTheorem.cpp
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_BezoutsTheorem\1_BezoutsTheorem.cpp(75,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\1_BezoutsTheorem\1_BezoutsTheorem.cpp(76,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   1_BezoutsTheorem.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\1_BezoutsTheorem.exe
