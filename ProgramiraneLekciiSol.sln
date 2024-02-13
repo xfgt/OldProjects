@@ -242,6 +242,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SymetricalDifference", "SymetricalDifference\SymetricalDifference.vcxproj", "{929A9F64-E565-4C7D-B691-E5972578F895}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "hw7", "hw7", "{3AC07C93-0B34-4172-8A4D-BCDA1FCFF058}"
+	ProjectSection(SolutionItems) = preProject
+		PermutationsOfThreeElements\visual-representation.png = PermutationsOfThreeElements\visual-representation.png
+		PermutationsOfThreeElements\Рекурзия.pdf = PermutationsOfThreeElements\Рекурзия.pdf
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PermutationsOfThreeElements", "PermutationsOfThreeElements\PermutationsOfThreeElements.vcxproj", "{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -1018,6 +1026,14 @@ Global
 		{929A9F64-E565-4C7D-B691-E5972578F895}.Release|x64.Build.0 = Release|x64
 		{929A9F64-E565-4C7D-B691-E5972578F895}.Release|x86.ActiveCfg = Release|Win32
 		{929A9F64-E565-4C7D-B691-E5972578F895}.Release|x86.Build.0 = Release|Win32
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Debug|x64.ActiveCfg = Debug|x64
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Debug|x64.Build.0 = Debug|x64
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Debug|x86.ActiveCfg = Debug|Win32
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Debug|x86.Build.0 = Debug|Win32
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Release|x64.ActiveCfg = Release|x64
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Release|x64.Build.0 = Release|x64
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Release|x86.ActiveCfg = Release|Win32
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1139,6 +1155,8 @@ Global
 		{D0CB5AD4-29A3-45A7-A3B0-EA9BDF06E141} = {BA99EC44-CBB4-49AB-8E73-CBC08CD89DA8}
 		{4EDB183A-F473-4E11-B007-CFB9AB8C8793} = {F7D23AF5-E69B-4E0E-A43C-F20BD7224ABE}
 		{929A9F64-E565-4C7D-B691-E5972578F895} = {361D1B64-DD6B-44E4-B4D1-0515CD1EAE2C}
+		{3AC07C93-0B34-4172-8A4D-BCDA1FCFF058} = {16D1C219-7F15-426E-86AD-88140B2EED03}
+		{F07F1878-EA6F-4E03-9DBD-D1BD3F3E90E5} = {3AC07C93-0B34-4172-8A4D-BCDA1FCFF058}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15A5B858-6CBE-4AB6-9342-C0F78341F1CF}

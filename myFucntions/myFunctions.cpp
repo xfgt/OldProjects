@@ -235,3 +235,10 @@ bool nameCheckInList(std::string name, std::string* nameList, int nameListSize) 
     }
     return false;
 }
+
+void swap(int& a, int& b) {
+	int temp = 0;
+	temp = a;
+	a = b;
+	b = temp;
+}
