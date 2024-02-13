@@ -1,5 +1,5 @@
-/x64/*
+x64/
 *.workspace
 *.workspace.*
 *.sln
-/.vs
+.vs/
