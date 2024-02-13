@@ -1,3 +1,0 @@
-﻿  3_ReverseNums.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\3_ReverseNums\3_ReverseNums.cpp(11,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  3_ReverseNums.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\3_ReverseNums.exe

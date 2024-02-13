@@ -1,3 +1,0 @@
-﻿  ex-1.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\ex-1\ex-1.cpp(8,23): error C2440: 'initializing': cannot convert from 'const char [4]' to 'char *'
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\ex-1\ex-1.cpp(8,23): message : Conversion from string literal loses const qualifier (see /Zc:strictStrings)

@@ -1,3 +1,0 @@
-﻿  5_RandExplorer.cpp
-D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\5_RandExplorer\5_RandExplorer.cpp(12,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  5_RandExplorer.vcxproj -> D:\Documents\Personel\dev\cpp\Programirane Lekcii NBU\ProgramiraneLekciiSol\x64\Debug\5_RandExplorer.exe
