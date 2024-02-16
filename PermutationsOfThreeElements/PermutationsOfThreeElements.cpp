@@ -1,86 +1,138 @@
     
 #include <iostream>
-using namespace std;
 
 
-void printArr(int* arr, int size) {
+int** combinationsArr(int* arr, int arrSize, int firstIndex, int lastIndex) { // n = 3;
 
-    for (int i = 0; i < size; i++)
-    {
-        std::cout << arr[i];
-    }
-    std::cout << std::endl;
+	int** valuesArr = new int*[10]; //temp valuesArr for nums
+	for (int i = 0; i < 10; i++)
+	{
+		valuesArr[i] = new int[3]; // each row has 3 places for data
+		for (int g = 0; g < 3; g++)
+		{
+			valuesArr[i][g] = 0;
+		}
+	}
+
+	int a = arr[firstIndex];
+	int b = arr[firstIndex+1];
+	int c = arr[firstIndex+2];
+
+	int cnt = 0;
+	int row = 0;
+	while (a <= arr[lastIndex]) {
+		
+		if (c <= arrSize) {
+			for (int i = b; i < arrSize; i++)
+			{
+				valuesArr[row][cnt] = a;
+				valuesArr[row][cnt+1] = b;
+				//std::cout << inputArr << b << arr[i] << std::endl;
+				valuesArr[row][cnt+2] = arr[i];
+				//for (int f = cnt; f < cnt+3; f++) // you can print valuesArr
+				//{
+				//	std::cout << valuesArr[f];
+				//}
+				//std::cout << std::endl;
+				
+				row++;
+			}
+			b=c;
+			c++;
+		}
+		else {
+			c--;
+		}
+		
+		if (b == c) {
+			a++;
+			b = a + 1;
+			c = b + 1;
+			
+		}
+	}
+
+
+	return valuesArr; // the ready 2D array of arrays
 }
+
+
+void swap(int& x, int& y)
+{
+	int temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
+
+void permute(int* inputArr, int firstIndex, int lastIndex)
+{
+	if (firstIndex == lastIndex) {
+		
+		for (unsigned j = 0; j <= lastIndex; j++) {
+			std::cout << inputArr[j];
+		}
+		std::cout << std::endl;
+
+		
+	}
+	else
+	{
+		for (int i = firstIndex; i <= lastIndex; i++)
+		{
+			swap(inputArr[firstIndex], inputArr[i]); 
+			permute(inputArr, firstIndex + 1, lastIndex); 
+			swap(inputArr[firstIndex], inputArr[i]);
+			
+		}
+	}
+}
+
+
 
 int main()
 {
-	int allElements[] = { 1, 2, 3, 4, 5};
-	int allElementsSize = sizeof(allElements) / sizeof(allElements[0]);
+	
+	int arr[] = { 1, 2, 3, 4, 5 };
+//   *indexes = { 0, 1, 2, 3, 4 };
+	
+	int arr_size = sizeof(arr) / sizeof(arr[0]);
 
-    //permute(allElements, 0, allElementsSize);
+	
+	int** nums = new int*[10]; // create and assign 0-es to 2darr
+	for (int i = 0; i < 10; i++)
+	{
+		nums[i] = new int[3];
+		for (int j = 0; j < 3; j++)
+		{
+			nums[i][j] = 0;
+		}
+	}
 
-    
-    int* chosenEls = new int[3]; for (int i = 0; i < 3; i++) chosenEls[i] = 0;
-
-    int a = 0;
-    for (int i = 0; i < 3; i++) {
-        if (a < allElementsSize) {
-            chosenEls[i] = allElements[a];
-        }
-        a++;
-    }
-
-
-    unsigned int c = 0;
-    // when we reach [2] == '5', we increment [1] with 'one' and decrement [2] with 'one';
-    // the second time we reach '5', we increment [0] with 'one' UNTIL [1] < 5
-    while (chosenEls[1] < allElementsSize)
-    {
+	nums = combinationsArr(arr, arr_size, 0, 2); // assign func arr to this "nums" arr.
+	
+	int* eachRow = new int[3];
 
 
-
-        if (chosenEls[1] < chosenEls[2]){
-            if (chosenEls[1] != chosenEls[2])
-                printArr(chosenEls, 3);
-        }
-
-
-
-        if (chosenEls[2] != 5) {
-            chosenEls[2]++;
-        }
-        else {
-            if (c <= 2)
-                chosenEls[1]++; chosenEls[2]--;
-            if (c >= 2)
-                chosenEls[2]--;
-            c++;
-            /*std::cout << "(" << c << ")\n";*/
-        }
-
-        if (c >= 2) {
-            if (chosenEls[1] < chosenEls[2]) {
-                if (chosenEls[1] != chosenEls[2]) {
-                    printArr(chosenEls, 3);
-
-                }
-                else {
-                    chosenEls[2]++;
-                }
-            }
-            chosenEls[0]++;
-            chosenEls[1]--;
-            chosenEls[2]--;
-            c=0;
-            /*std::cout << "-(" << c << ")\n";*/
-        }
-
-        
+	for (int i = 0; i < 10; i++) // output
+	{
+		for (int x = 0; x < 3; x++)
+		{
+			eachRow[x] = nums[i][x];
+		}
+		permute(eachRow, 0, 2);
+	}
 
 
-    }
+	
 
-    
+	for (int i = 0; i < 10; ++i) // memory management
+	{
+		delete[] nums[i];
+		nums[i] = nullptr;
+	}
 
+	delete nums;
+	nums = nullptr;
 	return 0;
 }
