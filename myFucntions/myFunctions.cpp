@@ -23,21 +23,29 @@ char* cutWBitmask(char* inputArr, char* bitmask, int size) {
 	return output;
 }
 
-int fact(int n){
-    // n! = n * n-1 ... 1
-    int a = n;
-    int t = 1;
-    while (a > 1){
-        t *= a;
-        a--;
-    }
-    
-    return t;
+
+int fact(unsigned int n) {
+	// n! = n * n-1 ... 1
+	int a = n;
+	int t = 1;
+	while (a > 1) {
+		t *= a;
+		a--;
+	}
+
+	return t;
 }
 
-int nCk(int n, int k){
-    int result = fact(n) / (fact(k)*fact(n-k));
-    return result;
+int nCk(unsigned int n, unsigned int k) {
+	int result = 0;
+	if (n > k) {
+		result = fact(n) / (fact(k) * fact(n - k));
+		return result;
+	}
+	else {
+		return 1;
+	}
+	return 0;
 }
 
 
