@@ -244,9 +244,152 @@ bool nameCheckInList(std::string name, std::string* nameList, int nameListSize) 
     return false;
 }
 
+bool isDigitInArr(int sample, int* arrCompare, int arrCompare_size) {
+	bool itsIn = false;
+	for (int i = 0; i < arrCompare_size; i++)
+	{
+		if (sample == arrCompare[i]) {
+			itsIn = true;
+			break;
+		}
+		else {
+			continue;
+		}
+	}
+	return itsIn;
+}
+
 void swap(int& a, int& b) {
 	int temp = 0;
 	temp = a;
 	a = b;
 	b = temp;
 }
+
+
+void encryptTextNPositions(char* txt, int positions) {
+	/*
+	* ASCII:
+	*
+	* A - Z -> 65 - 90
+	* a - z -> 97 - 122
+	*
+	*/
+
+	std::string textHolder = txt;
+	std::string outputText = "";
+	char getAscii = 0;
+	for (int i = 0; i <= textHolder.length(); i++)
+	{
+		if (textHolder[i] >= 'A' && textHolder[i] <= 'Z' ||
+			textHolder[i] >= 'A' && textHolder[i] <= 'z') {
+
+
+			// check capital letters
+			if (textHolder[i] >= 'A' && textHolder[i] <= 'Z') {
+
+				textHolder[i] += positions;
+
+
+				if (textHolder[i] >= 65 && textHolder[i] <= 90) {
+					outputText += textHolder[i];
+				}
+
+
+				else {
+
+					if (textHolder[i] > 0) {
+						textHolder[i] -= 90;
+						textHolder[i] += 65;
+						textHolder[i] -= 2; // correction 
+						if (textHolder[i] >= 65 && textHolder[i] <= 90) {
+							outputText += (char)textHolder[i];
+						}
+						else {
+							textHolder[i]++;
+							outputText += (char)textHolder[i];
+						}
+
+					}
+					else {
+						textHolder[i] -= positions;
+						if (textHolder[i] - 90 > 0) {
+							textHolder[i] -= positions;
+							textHolder[i] = 65 - textHolder[i];
+							textHolder[i] += 65;
+							textHolder[i] -= 1;
+							outputText += textHolder[i];
+
+						}
+						else {
+							textHolder[i] -= 5;
+							outputText += textHolder[i];
+						}
+					}
+
+				}
+
+			} // uppercase 
+
+
+
+			// check low-case letters
+			if (textHolder[i] >= 'a' && textHolder[i] <= 'z') {
+
+				textHolder[i] += positions;
+
+
+				if (textHolder[i] >= 97 && textHolder[i] <= 122) {
+					outputText += textHolder[i];
+				}
+
+
+				else {
+
+					if (textHolder[i] > 0) {
+						textHolder[i] -= 122;
+						textHolder[i] += 97;
+						textHolder[i] -= 2; // correction 
+						if (textHolder[i] >= 97 && textHolder[i] <= 122) {
+							outputText += (char)textHolder[i];
+						}
+						else {
+							textHolder[i]++;
+							outputText += (char)textHolder[i];
+						}
+
+					}
+					else {
+						textHolder[i] -= positions;
+						if (textHolder[i] - 122 > 0) {
+							textHolder[i] -= positions;
+							textHolder[i] = 97 - textHolder[i];
+							textHolder[i] += 97;
+							textHolder[i] -= 1;
+							outputText += textHolder[i];
+
+						}
+						else {
+							textHolder[i] -= 5;
+							outputText += textHolder[i];
+						}
+					}
+
+				}
+
+			} // lowercase 
+
+
+		}
+		else { // include all other symbols & spaces
+			outputText += textHolder[i];
+		}
+
+	} // for end
+
+	for (int i = 0; i < outputText.length(); i++)
+	{
+		std::cout << outputText[i];
+	}
+
+} //func end
