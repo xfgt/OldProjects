@@ -178,7 +178,7 @@ int main() {
 	else
 		PTOMOVE = SMOFI;
 
-	encryptText(input, PTOMOVE);
+	encryptTextNPositions(input, PTOMOVE);
 	
 
 
