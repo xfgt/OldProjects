@@ -393,3 +393,32 @@ void encryptTextNPositions(char* txt, int positions) {
 	}
 
 } //func end
+
+
+
+bool isPowerOfTwo(int x) {
+	if (x != 0) {
+		float log_two_x = log2(x);
+
+		if (round(log_two_x) == log_two_x) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	return false;
+}
+
+int getRandomNumberFromLimits(int low, int high) {
+
+	int iSecret;
+	srand(time(NULL));
+	srand(rand());
+	srand(rand());
+
+	iSecret = rand() % (high + 1 - (low)) + low;
+
+
+	return iSecret;
+}
