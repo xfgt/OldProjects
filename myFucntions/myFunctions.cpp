@@ -422,3 +422,29 @@ int getRandomNumberFromLimits(int low, int high) {
 
 	return iSecret;
 }
+
+void deleteTwoDArr(int** arr, int rows) {
+
+	for (int i = 0; i < rows; i++)
+	{
+		delete[] arr[i];
+		arr[i] = nullptr;
+	}
+	delete[] arr;
+	arr = nullptr;
+}
+
+void deleteThreeDArr(int** arr, int rows, int cols) {
+
+	for (int i = 0; i < rows; i++)
+	{
+		for (int j = 0; j < cols; j++)
+		{
+			delete[] arr[i][j];
+			arr[i][j] = nullptr;
+		}
+		
+	}
+	delete[] arr;
+	arr = nullptr;
+}

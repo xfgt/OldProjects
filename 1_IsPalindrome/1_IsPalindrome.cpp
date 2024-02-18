@@ -2,21 +2,30 @@
 //
 
 #include <iostream>
-#include <string.h>
+#include <string>
+#include <cctype>
 
 int main()
 {
-	char str[5];
-	char* pstr = str;
+	char input[19];
 
+	std::cin.getline(input, 19);
 
-	std::cin.getline(str, 5, NULL);
-	std::cout << "str: " << str << std::endl;
-	
-	while (*pstr) {
-		std::cout <<"*pstr: [" << pstr <<"] " << *pstr << std::endl;
-		pstr++;
+	for (int i = 0; i < strlen(input); i++)
+	{
+		input[i] = tolower(input[i]);
 	}
+	int count = 0;
+	for (int i = 0; i < strlen(input); i++)
+	{
+		
+		if (input[i] == input[strlen(input) - i - 1])
+			count++;
+	}
+	if (count == strlen(input))
+		printf("\n\"%s\" is a palindrome!\n", input);
+	else
+		printf("\b\"%s\" is not a palindrome.\n", input);
 	
 
 }
