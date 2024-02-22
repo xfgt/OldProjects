@@ -448,3 +448,49 @@ void deleteThreeDArr(int** arr, int rows, int cols) {
 	delete[] arr;
 	arr = nullptr;
 }
+
+
+void deleteElementOfArray(int* a, int& size, int pos) {
+	a[pos] = '\0';
+	for (int i = pos; i < size; i++)
+	{
+		a[i] = a[i + 1];
+	}
+	size -= 1;
+}
+void addElementAtEndOfArray(int* a, int& size, unsigned element) {
+	size += 1;
+	for (int i = size - 1; i < size; i++)
+	{
+		a[i] = 0;
+	}
+	a[size - 1] = element;
+
+}
+void addElementAtSelectedPosOfArray(int* a, int& size, int pos, unsigned element) {
+
+	if (a[pos] != '\0') {
+		size += 1;
+		for (int i = size - 1; i < size; i++)
+		{
+			a[i] = 0;
+		}
+
+		for (int i = size - 1; i > pos; i--)
+		{
+			a[i] = a[i - 1];
+		}
+
+		a[pos] = element;
+	}
+
+	else {
+		a[pos] = element;
+
+	}
+
+}
+void changeElementValueAtPosOfArray(int* a, int pos, unsigned element) {
+	a[pos] = element;
+
+}
