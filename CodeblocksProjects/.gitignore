@@ -1,3 +1,10 @@
 # Custom
-*.workspace
-*.workspace.layout
+.workspace
+.workspace.layout
+
+
+./*/bin
+./*/obj
+./*/.cbp
+./*/.depend
+./*/.layout
