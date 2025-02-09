@@ -1,0 +1,427 @@
+/*
+Занятие 2;
+
+Въпроси:
+1. 
+	Трябва да е известна позицията на знака спрямо операнда/ите му.
+	Трябва да знаем неговият приоритет.
+	Нужен ни е тип асоциативност в дълги изрази.
+
+
+2.	
+	За да се избегне объркване при ползването на много функции в израз е по-удобно операторите, които ще се ползват вместо тях, да бъдат предефинирани.
+	Работата с функции използваме по принцип.
+
+
+3.	
+	.
+	.
+	};
+
+	ClassType& operator+(ClassType& obj, double num) {
+		obj.setUspeh(obj.getUspeh() + (obj.getUspeh() * (num / 100)));
+		return obj;
+	}
+
+	Да, добро приложение е, ако се използва само за увеличаване на стойности с проценти, а не с естествени стойности.
+
+
+4.	
+	Да можем, тъй като ние избираме какво да се случи с обекта.
+	Поставеният пример е изпълним, но не е практичен, тъй като може да създаде объркване с увеличаване размера на кода.
+
+
+5.	
+	При операторите (), [], ->, =						 ;
+	Когато се изисква достъп до член-данните на функцията;
+	При различните форми за присвояване
+
+
+6.
+	Няма никаква промяна в изхода на програмата с или без скобите в израза от 1-ви ред.
+
+	За 'pi' ще се съхрани стойността '3.14159';
+	За 'pi_two' ще се съхрани случайна стойност от паметта, която спада в ограничението на типът данни в който е декларирана.
+	Новата стойност на 'pi_two' ще стане тази на 'pi'
+
+*/
+
+
+/// ivan.cpp
+#include <iostream>
+
+class Student {
+
+private:
+	std::string ime;
+	double uspeh;
+public:
+	Student(std::string localIme, double localUspeh) {
+		ime = localIme;
+		uspeh = localUspeh;
+	}
+
+	std::string getIme() const {
+		return ime;
+	}
+	double getUspeh() const {
+		return uspeh;
+	}
+
+	void setUspeh(double usp) {
+		this->uspeh = usp;
+	}
+
+
+};
+std::ostream& operator<<(std::ostream& COUT, Student& obj) {
+	COUT << obj.getIme() << '\n' << obj.getUspeh() << std::endl;
+	return COUT;
+}
+
+
+//записва се в(обект), оператор, (обектът от класа, операнд)
+Student& operator+(Student& obj, double num) {
+	obj.setUspeh(obj.getUspeh() + (obj.getUspeh() * (num / 100)));
+	return obj;
+}
+
+int main() {
+
+	Student ivanObj = Student("Ivan", 4.50);
+
+	std::cout << ivanObj;
+
+	ivanObj + 5;
+	std::cout << ivanObj;
+
+
+	return 0;
+}
+
+
+/// Time.cpp
+#include <iostream>
+
+
+class Time {
+
+private:
+	int minutes;
+	int seconds;
+
+public:
+	Time(int mins, int secs) {
+
+		minutes = mins;
+		seconds = secs;
+	}
+
+	int getMins() const { return minutes; }
+	int getSecs() const { return seconds; }
+
+
+	void setMins(int mins) { this->minutes = mins; }
+	void setSecs(int secs) { this->seconds = secs; }
+
+};
+
+std::ostream& operator<<(std::ostream& COUT, Time& obj) {
+	COUT << obj.getMins() << '\n' << obj.getSecs() << std::endl;
+	return COUT;
+}
+
+Time& operator-(Time& obj) {
+
+	obj.setSecs(obj.getSecs() - 60);
+	return obj;
+
+}
+
+
+int main() {
+
+	Time t1 = Time(59, 60);
+
+
+	std::cout << t1;
+	-t1;
+	std::cout << t1;
+
+
+	return 0;
+}
+
+
+/// ЗАДАЧА 1: (MONEY)
+#include <iostream>
+
+class Money {
+
+private:
+	int leva;
+	int stotinki;
+
+public:
+
+	Money(int lev = 0, int stotinka = 0) {
+		leva = lev;
+		stotinki = stotinka;
+
+	}
+
+	int getLeva() const {
+		return leva;
+	}
+	int getStotinki() const {
+		return stotinki;
+	}
+
+	void setLeva(int lv) {
+		leva = lv;
+	}
+	void setStotinki(int st) {
+		stotinki = st;
+	}
+
+	bool operator<(const Money& obj) const {
+		return this->getLeva() < obj.getLeva();
+	}
+	bool operator>(const Money& obj) const {
+		return this->getLeva() > obj.getLeva();
+	}
+
+};
+
+Money& operator+(Money& obj, int num) {
+	obj.setLeva(obj.getLeva() + num);
+	return obj;
+}
+Money& operator-(Money& obj, int num) {
+	obj.setLeva(obj.getLeva() - num);
+	return obj;
+}
+
+Money& operator*(Money& obj, int num) {
+	obj.setLeva(obj.getLeva() * num);
+	return obj;
+}
+Money& operator/(Money& obj, int num) {
+	obj.setLeva(obj.getLeva() / num);
+	return obj;
+}
+
+
+Money& operator%(Money& obj, int num) {
+	int nLev;
+	double nStot;
+
+	nLev = obj.getLeva();
+	nStot = obj.getStotinki();
+
+	double wholeNumber = (double)nLev + (nStot / 100);
+	wholeNumber *= (double)num / 100;
+
+	nLev = floor(wholeNumber);
+	nStot = (wholeNumber - nLev) * 100;
+
+
+	obj.setLeva(nLev);
+	obj.setStotinki((int)nStot);
+	return obj;
+}
+
+
+std::ostream& operator<<(std::ostream& COUT, Money& obj) {
+
+	COUT << obj.getLeva() << "," << obj.getStotinki() << "lv." << std::endl;
+	return COUT;
+
+}
+
+std::istream& operator>>(std::istream& IN, Money& obj) {
+	int x, y; // THESE ARE LIKE PLACEHOLDERS FOR THE PRIVATE VARIABLES OF THE OBJECT
+	IN >> x >> y; // WE GET THEM
+	// WE SET THEM
+	obj.setLeva(x);
+	obj.setStotinki(y);
+
+
+	// RETURN THE OBJECT WITH THE NEW PRIVATE VALUES
+	return IN;
+}
+
+int main() {
+
+	Money m1 = Money(2, 60); //2 lv. 60 st.
+	std::cout << m1;
+
+	m1 + 5;
+	std::cout << m1;
+
+	m1 - 5;
+	std::cout << m1;
+
+	m1 * 5;
+	std::cout << m1;
+
+	m1 / 5;
+	std::cout << m1;
+
+	m1 % 5;
+	std::cout << m1;
+
+	if (m1 < 5) {
+		std::cout << 'y';
+	}
+	else if (m1 > 5) {
+
+		std::cout << 'n';
+	}
+	std::cout << std::endl;
+	Money m2 = Money(7, 30);
+	if (m2 < 5) {
+		std::cout << 'y';
+
+	}
+	else if (m2 > 5) {
+		std::cout << 'n';
+
+	}
+	std::cout << std::endl;
+	std::cin >> m2;
+	std::cout << m2;
+
+
+
+
+
+	return 0;
+}
+
+/*
+	ОТГОВОРИ КЪМ ЗАДАЧАТА:
+
+	1.	Да, понеже операнди ще бъдат самите обекти.
+
+	2.
+		За аритметичните: обект, число
+		За сравнение: само обект
+		За I/O:	обектът I/O, обектът от нашия клас "Money"
+
+
+*/
+
+
+
+
+/// ЗАДАЧА 2: (BIG INTEGER)
+
+#include <iostream>
+#include <string>
+
+
+
+class BigInteger {
+
+private:
+	std::string string_number;
+
+
+public:
+	BigInteger() {
+		string_number = "";
+	}
+
+	BigInteger(std::string n) {
+		string_number = n;
+	}
+
+	std::string getString() const {
+		return string_number;
+	}
+
+	void setString(std::string s) {
+		string_number = s;
+	}
+
+
+};
+
+
+std::ostream& operator<<(std::ostream& OUTobj, BigInteger& obj) {
+	OUTobj << obj.getString() << std::endl;
+	return OUTobj;
+}
+
+long& operator+(BigInteger& obj1, BigInteger& obj2) {
+
+
+	long a, b, result;
+	std::string strA = obj1.getString();
+	std::string strB = obj2.getString();
+
+	// parse to int
+	a = atol(strA.c_str());
+	b = atol(strB.c_str());
+
+	// add them 
+	result = a + b;
+
+	// return value
+	return result;
+}
+
+long& operator-(BigInteger& obj1, BigInteger& obj2) {
+
+	long a, b, result;
+	std::string strA = obj1.getString();
+	std::string strB = obj2.getString();
+
+	// parse to int
+	a = atol(strA.c_str());
+	b = atol(strB.c_str());
+
+	// add them 
+	result = a - b;
+
+	// return value
+	return result;
+}
+
+
+long long& operator*(BigInteger& obj1, BigInteger& obj2) {
+
+	long long a, b, result;
+	std::string strA = obj1.getString();
+	std::string strB = obj2.getString();
+
+	// parse to int
+	a = atol(strA.c_str());
+	b = atol(strB.c_str());
+
+	// add them 
+	result = a * b;
+
+	// return value
+	return result;
+}
+
+
+int main() {
+
+	BigInteger a("123456789");
+	BigInteger b("987654321");
+
+	std::cout << a << b;
+
+	std::cout << "a + b = "; std::cout << a + b << std::endl;
+	std::cout << "a - b = "; std::cout << a - b << std::endl;
+	std::cout << "a * b = "; std::cout << a * b << std::endl;
+
+	std::cout << a << b;
+
+
+
+	return 0;
+}

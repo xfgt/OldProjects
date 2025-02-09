@@ -1,0 +1,12 @@
+﻿  Student.cpp
+D:\Documents\Personel\dev\cpp\sem2\march-22-24\Student.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'Student.cpp')
+  
+D:\Documents\Personel\dev\cpp\sem2\march-22-24\Student.cpp(15,26): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+D:\Documents\Personel\dev\cpp\sem2\march-22-24\Student.cpp(52,26): warning C4267: 'initializing': conversion from 'size_t' to 'char', possible loss of data
+  main.cpp
+D:\Documents\Personel\dev\cpp\sem2\march-22-24\Student.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'main.cpp')
+  
+  Generating Code...
+  march-22-24.vcxproj -> D:\Documents\Personel\dev\cpp\sem2\x64\Debug\march-22-24.exe

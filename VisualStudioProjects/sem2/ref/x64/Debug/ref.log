@@ -1,0 +1,5 @@
+﻿  Source.cpp
+D:\Documents\Personel\dev\cpp\sem2\ref\Source.cpp(29,22): error C2440: 'initializing': cannot convert from 'int' to 'int *'
+  D:\Documents\Personel\dev\cpp\sem2\ref\Source.cpp(29,22):
+  Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  

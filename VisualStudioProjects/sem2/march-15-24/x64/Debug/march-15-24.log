@@ -1,0 +1,13 @@
+﻿  index.cpp
+  Point.cpp
+  Triangle.cpp
+  Generating Code...
+C:\Users\User\Desktop\Point1\index.cpp(1,1): error C1083: Cannot open source file: 'C:\Users\User\Desktop\Point1\index.cpp': No such file or directory
+  (compiling source file 'C:/Users/User/Desktop/Point1/index.cpp')
+  
+C:\Users\User\Desktop\Point1\Point.cpp(1,1): error C1083: Cannot open source file: 'C:\Users\User\Desktop\Point1\Point.cpp': No such file or directory
+  (compiling source file 'C:/Users/User/Desktop/Point1/Point.cpp')
+  
+C:\Users\User\Desktop\Point1\Triangle.cpp(1,1): error C1083: Cannot open source file: 'C:\Users\User\Desktop\Point1\Triangle.cpp': No such file or directory
+  (compiling source file 'C:/Users/User/Desktop/Point1/Triangle.cpp')
+  

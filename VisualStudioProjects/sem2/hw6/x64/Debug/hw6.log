@@ -1,0 +1,15 @@
+﻿  CSCB212_HW_T6_F113621.cpp
+D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(178,51): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(178,52): warning C5043: 'Student::read': exception specification does not match previous declaration
+  D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(110,7):
+  see declaration of 'Student::read'
+  
+D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(196,4): warning C4297: 'Student::read': function assumed not to throw an exception but does
+  D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(196,4):
+  __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+  
+D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(210,4): warning C4297: 'Student::read': function assumed not to throw an exception but does
+  D:\Documents\Personel\dev\cpp\sem2\hw6\CSCB212_HW_T6_F113621.cpp(210,4):
+  __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+  
+  hw6.vcxproj -> D:\Documents\Personel\dev\cpp\sem2\x64\Debug\hw6.exe

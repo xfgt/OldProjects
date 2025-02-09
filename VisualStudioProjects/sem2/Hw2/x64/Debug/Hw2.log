@@ -1,0 +1,7 @@
+﻿Ivan.obj : error LNK2005: main already defined in BigInteger.obj
+main.obj : error LNK2005: "class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl operator<<(class std::basic_ostream<char,struct std::char_traits<char> > &,class BigInteger &)" (??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEAVBigInteger@@@Z) already defined in BigInteger.obj
+main.obj : error LNK2005: "__int64 & __cdecl operator*(class BigInteger &,class BigInteger &)" (??D@YAAEA_JAEAVBigInteger@@0@Z) already defined in BigInteger.obj
+main.obj : error LNK2005: "long & __cdecl operator-(class BigInteger &,class BigInteger &)" (??G@YAAEAJAEAVBigInteger@@0@Z) already defined in BigInteger.obj
+main.obj : error LNK2005: "long & __cdecl operator+(class BigInteger &,class BigInteger &)" (??H@YAAEAJAEAVBigInteger@@0@Z) already defined in BigInteger.obj
+main.obj : error LNK2005: main already defined in BigInteger.obj
+D:\Documents\Personel\dev\cpp\sem2\x64\Debug\Hw2.exe : fatal error LNK1169: one or more multiply defined symbols found

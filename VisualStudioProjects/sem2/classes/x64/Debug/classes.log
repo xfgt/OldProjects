@@ -1,0 +1,3 @@
+﻿  main.cpp
+D:\Documents\Personel\dev\cpp\sem2\classes\main.cpp(42,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  classes.vcxproj -> D:\Documents\Personel\dev\cpp\sem2\x64\Debug\person.exe
