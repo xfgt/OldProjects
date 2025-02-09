@@ -4,9 +4,9 @@ Debug/
 .vs/
 .vscode/
 
-./*/.vcxproj
-./*/.filters
-./*/.user
+*.vcxproj
+*.filters
+*.user
 
 
 # Prerequisites
